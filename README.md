@@ -1,2 +1,11 @@
 # pt_to_safetensors_converter_notebook
-This is a notebook for converting Stable Diffusion embeddings from .pt to safetensors format.
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ICa2nh3mbflJCrJ4oKNUHWTZ9_vTJw8F?usp=sharing) 
+
+This notebook provides a simple tool to convert Stable Diffusion embeddings from .pt to safetensors format. Because of security concerns around .pt files and their ability to execute potentially malicious code, some people might prefer to share their textual inversion embeddings for stable diffusion models in the more secure SafeTensors format instead.
+
+This is a very basic implementation. Although the converted embeddings I've tested give the same results as the originals, some extraneous information contained in the original files is lost in the conversion process.
+
+A final word of caution: avoid using this notebook to convert a .pt file on your own machine unless that file is from a verified, trusted source. The .pt file is accessed and executed when the notebook is run, along with any potentially malicious code it may contain.
+
+
